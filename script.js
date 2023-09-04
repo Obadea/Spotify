@@ -410,7 +410,6 @@ const play = function () {
             palyingAnimation.style.display = "none";
             interval.dataset.currentTime = 0;
             interval.dataset.currentPause = 0;
-            console.log("end");
             intervalDot.style.marginLeft = "100%";
             clearTimeout(timer2);
             start2 = 0;
@@ -427,14 +426,12 @@ const play = function () {
         Number(interval.getAttribute("data-current-pause")) == 0
       ) {
         clearTimeout(timer);
-        console.log(interval.dataset.currentPause);
       }
       if (
         !pausebtnTriangle.classList.contains("hide") &&
         !Number(interval.getAttribute("data-current-pause")) == 0
       ) {
         clearTimeout(timer2);
-        console.log(interval.dataset.currentPause);
         start2 = 0;
         interval.dataset.currentTime = interval.dataset.currentPause;
       }
