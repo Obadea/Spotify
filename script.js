@@ -172,9 +172,7 @@ const displayNavContent = () => {
     const html = `<div title="${cur}" class="nav__img"></div>`;
     sectionNav2.insertAdjacentHTML("beforeend", html);
     const navContentElement = document.querySelectorAll(".nav__img");
-    // console.log(navContentElement);
     navContentElement.forEach((cur, i) => {
-      //   console.log(cur);
       cur.style.backgroundImage = `url(${navArtist.profilePic[i]})`;
     });
   });
@@ -376,7 +374,6 @@ const play = function () {
     timer = setInterval(() => {
       start = start + add;
       player(start);
-      console.log(start);
       if (start === end) {
         intervalDot.style.marginLeft = "100%";
         pausebtnTriangle.classList.remove("hide");
@@ -386,7 +383,7 @@ const play = function () {
         console.log("end");
         clearTimeout(timer);
       }
-    }, 200);
+    }, 400);
 
     const player = (start) => {
       interval.setAttribute("data-current-time", start);
@@ -417,7 +414,7 @@ const play = function () {
           if (interval.dataset.currentTime >= "90") {
             clearTimeout(timer2);
           }
-        }, 150);
+        }, 400);
       }
 
       // to pause note:
@@ -432,7 +429,6 @@ const play = function () {
         !Number(interval.getAttribute("data-current-pause")) == 0
       ) {
         clearTimeout(timer2);
-        start2 = 0;
         interval.dataset.currentTime = interval.dataset.currentPause;
       }
     });
