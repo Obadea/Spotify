@@ -470,7 +470,8 @@ sideBarNavArtists.forEach((cur, i) => {
       interval.dataset.currentPause = 0;
       like.classList.remove("music__control__love__iconToggle");
       play();
-
+      palyingAnimation.style.display = "flex";
+      pausebtnTriangle.classList.add("hide");
       like.addEventListener("click", function () {
         cur.setAttribute("data-liked-song-data", "liked");
       });
@@ -492,9 +493,9 @@ content1.forEach((cur, i) => {
       curSongTitle.textContent = `${content1Titles.titles[i]}`;
       // clearTimeout(timer);
       // clearTimeout(timer2);
-      // play();
-      // palyingAnimation.style.display = "flex";
-      // pausebtnTriangle.classList.add("hide");
+      play();
+      palyingAnimation.style.display = "flex";
+      pausebtnTriangle.classList.add("hide");
 
       like.classList.remove("music__control__love__iconToggle");
 
@@ -519,9 +520,9 @@ content2.forEach((cur, i) => {
     curSongArtist.textContent = `by ${content2DailyMix[3][i].split(",", 1)}...`;
     // clearTimeout(timer);
     // clearTimeout(timer2);
-    // play();
-    // palyingAnimation.style.display = "flex";
-    // pausebtnTriangle.classList.add("hide");
+    play();
+    palyingAnimation.style.display = "flex";
+    pausebtnTriangle.classList.add("hide");
 
     like.classList.remove("music__control__love__iconToggle");
 
@@ -545,9 +546,9 @@ content3.forEach((cur, i, arr) => {
     curSongArtist.textContent = content3Artist[i].split(",", 1);
     // clearTimeout(timer);
     // clearTimeout(timer2);
-    // play();
-    // palyingAnimation.style.display = "flex";
-    // pausebtnTriangle.classList.add("hide");
+    play();
+    palyingAnimation.style.display = "flex";
+    pausebtnTriangle.classList.add("hide");
 
     like.classList.remove("music__control__love__iconToggle");
 
